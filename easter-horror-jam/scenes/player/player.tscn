@@ -1,3 +1,28 @@
 [gd_scene format=3 uid="uid://cron2dyhquthj"]
 
+[ext_resource type="Script" uid="uid://bp7soisdriff7" path="res://scripts/player/player.gd" id="1_dovo2"]
+[ext_resource type="Texture2D" uid="uid://onjbhnu87go7" path="res://assets/sprites/73733-emoticon-smiley-wink-smile-whatsapp-emoji-4069478374.png" id="2_gmlin"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvxji"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(0, 0, 1200, 1200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p47bc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvxji")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D" unique_id=1025460383]
+script = ExtResource("1_dovo2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1649531236]
+scale = Vector2(0.125, 0.125)
+sprite_frames = SubResource("SpriteFrames_p47bc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=466847880]
