@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b56cw4pnfajke"]
+
+[ext_resource type="Texture2D" uid="uid://d4du6sud0cro6" path="res://assets/sprites/Flashlight.png" id="1_fcwsx"]
+
+[node name="Flashlight" type="Node2D" unique_id=377985260]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=572162676]
+texture = ExtResource("1_fcwsx")
