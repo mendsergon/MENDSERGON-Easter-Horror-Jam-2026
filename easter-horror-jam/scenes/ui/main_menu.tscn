@@ -58,6 +58,19 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1g8jr")
 
+[node name="Label" type="Label" parent="." unique_id=1296651949]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -220.0
+offset_right = 220.0
+offset_bottom = 116.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_sl1te")
+theme_override_font_sizes/font_size = 128
+text = "GAME TITLE"
+
 [node name="MainButtons" type="VBoxContainer" parent="." unique_id=1182524450]
 layout_mode = 1
 anchors_preset = 8
@@ -66,9 +79,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -233.0
-offset_top = -136.0
+offset_top = -93.0
 offset_right = 233.0
-offset_bottom = 136.0
+offset_bottom = 179.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 12
@@ -111,9 +124,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -296.0
-offset_top = -197.0
+offset_top = -153.0
 offset_right = 296.0
-offset_bottom = 197.0
+offset_bottom = 241.0
 grow_horizontal = 2
 grow_vertical = 2
 
