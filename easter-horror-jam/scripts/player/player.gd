@@ -23,15 +23,11 @@ func _physics_process(_delta: float) -> void:
 		velocity = Vector2.ZERO
 		animated_sprite_2d.play("idle")
 	
-	# Flip sprite based on horizontal direction
+	# Flip sprite based on x direction
 	if last_direction.x < 0:
 		animated_sprite_2d.flip_h = true
-		flashlight.position.x = -8
-		flashlight.scale.x = -1
 	elif last_direction.x > 0:
 		animated_sprite_2d.flip_h = false
-		flashlight.position.x = 8
-		flashlight.scale.x = 1
 	
 	move_and_slide()
 
