@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://bhairmv28o2w5" path="res://assets/fonts/Bitrimus.ttf" id="1_sl1te"]
 [ext_resource type="AudioStream" uid="uid://bbpyx1xn3n1b7" path="res://assets/audio/music/djpitt.mp3" id="3_1g8jr"]
 [ext_resource type="Script" uid="uid://dcbvyydhkywg3" path="res://scripts/systems/audio_control.gd" id="3_x2yvf"]
+[ext_resource type="Script" uid="uid://bt502eaqktqbm" path="res://scripts/systems/fullscreen_control.gd" id="4_x2yvf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1g8jr"]
 bg_color = Color(4.042983e-06, 0.6619701, 0.8347786, 1)
@@ -171,6 +172,20 @@ theme_override_fonts/font = ExtResource("1_sl1te")
 theme_override_font_sizes/font_size = 64
 text = "SFX"
 
+[node name="Label4" type="Label" parent="Settings" unique_id=785813434]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -229.0
+offset_top = 211.0
+offset_right = -13.0
+offset_bottom = 279.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_sl1te")
+theme_override_font_sizes/font_size = 64
+text = "Fullscreen"
+
 [node name="Back" type="Button" parent="Settings" unique_id=1070038631]
 layout_mode = 1
 anchors_preset = 7
@@ -236,6 +251,15 @@ value = 1.0
 script = ExtResource("3_x2yvf")
 audio_bus_name = "SFX"
 
+[node name="FullscreenControl" type="CheckButton" parent="Settings" unique_id=1723723951]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 233.0
+offset_right = 338.0
+offset_bottom = 259.0
+button_pressed = true
+script = ExtResource("4_x2yvf")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1295045046]
 stream = ExtResource("3_1g8jr")
 autoplay = true
@@ -246,3 +270,4 @@ bus = &"Music"
 [connection signal="pressed" from="MainButtons/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Settings/Back" to="." method="_on_back_pressed"]
 [connection signal="value_changed" from="Settings/Music" to="Settings/Music" method="_on_value_changed"]
+[connection signal="toggled" from="Settings/FullscreenControl" to="Settings/FullscreenControl" method="_on_toggled"]

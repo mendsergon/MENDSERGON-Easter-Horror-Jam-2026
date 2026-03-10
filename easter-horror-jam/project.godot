@@ -11,12 +11,18 @@ config_version=5
 [application]
 
 config/name="Easter Horror Jam"
+run/main_scene="uid://ctfpe0kjjtl1t"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
 
 buses/default_bus_layout="uid://bbi0liq5lhnwu"
+
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [physics]
 
